@@ -52,7 +52,7 @@ public class Login {
     }
     
     /**
-     * Checks if cell phone number contains international country code and is no more than 10 characters
+     * Checks if cell phone number contains international country code and has a valid length
      * @param cellPhone The cell phone number to validate
      * @return true if cell phone is correctly formatted, false otherwise
      */
@@ -61,8 +61,17 @@ public class Login {
             return false;
         }
         
-        // Check if it starts with + (international code) and total length <= 10 characters
-        return cellPhone.startsWith("+") && cellPhone.length() <= 10;
+        // Check if it starts with + (international code)
+        if (!cellPhone.startsWith("+")) {
+            return false;
+        }
+        
+        // Remove all non-digit characters except the leading +
+        String digits = cellPhone.substring(1).replaceAll("\\D", "");
+        
+        // Check if we have between 9-14 digits (after removing the +)
+        // This allows for country codes (1-3 digits) + phone number (typically 9-11 digits)
+        return digits.length() >= 9 && digits.length() <= 14;
     }
     
     /**
