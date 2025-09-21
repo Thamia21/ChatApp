@@ -1,0 +1,31 @@
+How to Run ChatApp in NetBeans
+=============================
+
+Prerequisites:
+- NetBeans IDE (Latest version recommended)
+- Java Development Kit (JDK) 8 or later installed
+
+Setup Instructions:
+1. Open NetBeans IDE
+2. Go to File > Open Project
+3. Navigate to the ChatApp directory (C:\Users\Keneilwe Sedibe\CascadeProjects\ChatApp)
+4. Select the ChatApp project and click "Open Project"
+5. Wait for NetBeans to index the project (check progress in the bottom-right corner)
+
+Running the Application:
+1. In the Projects window (usually on the left), expand the 'Source Packages' folder
+2. Locate and right-click on 'ChatApp.java'
+3. Select 'Run File' (or press Shift+F6)
+
+Alternative Run Method:
+1. Right-click on the project name in the Projects window
+2. Select 'Run' (or press F6)
+
+Note:
+- The application requires a database connection. Make sure your database server is running.
+- If you encounter any dependency issues, right-click on the project, select 'Resolve Project Problems', and follow the prompts.
+
+Troubleshooting:
+- If you get compilation errors, try right-clicking the project and selecting 'Clean and Build' (Shift+F11)
+- Ensure all required libraries are included in your project's classpath
+- Check the Output window (Ctrl+4) for any error messages
