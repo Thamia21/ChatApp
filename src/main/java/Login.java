@@ -1,7 +1,6 @@
 import java.util.regex.Pattern;
 import java.util.HashMap;
 import java.util.Map;
-import javax.swing.*;
 
 /**
  * Login class for chat application registration and authentication
